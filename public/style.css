@@ -1,0 +1,150 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #363740;
+    color: #A4A6B3;
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    z-index: 1000;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+}
+
+.sidebar .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar .logo span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #A4A6B3;
+    margin-left: 10px;
+}
+
+/* Sidebar Links */
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    width: 100%;
+    color: #A4A6B3;
+    text-decoration: none;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+/* Hover Effect: Add 3px Left Border */
+.sidebar a:hover {
+    background-color: #505050;
+    color: white;
+}
+
+.sidebar a:hover::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: white;
+}
+
+/* Separator Line */
+.sidebar hr {
+    border: none;
+    height: 1px;
+    background-color: #505050;
+    margin: 15px 0;
+}
+
+/* Main Content Wrapper */
+.main-content-wrapper {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #F7F8FC;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.title-a {
+    font-size: 22px;
+    font-weight: 600; 
+    margin-left: 20px;
+}
+
+/* Sidebar Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .main-content-wrapper {
+        margin-left: 0;
+    }
+}
+
+/* Header Offset */
+.content-container {
+    padding-top: 50px;
+}
+
+/* Styling for Cards */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.card-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+

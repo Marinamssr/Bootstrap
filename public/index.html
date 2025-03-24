@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dashboard</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://kit.fontawesome.com/04941ac3de.js" crossorigin="anonymous"></script>
+      <style> @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap'); </style>
+   </head>
+   <body>
+      <!----- Sidebar -->
+      <div class="sidebar">
+         <!-------- Logo -->
+         <div class="logo mb-4 d-flex align-items-center"><img src="assets/images/logo.png" alt="Dashboard Logo" style="width: 30px; height: 30px;"><span class>Dashboard Kit</span></div>
+         <!-------- Navigation Links -->
+         <nav class>
+              <ul class="list-unstyled">
+                <li class="nav-item selected container-fluid g-0"><a href="#" class="row g-0"><i class="fa-solid fa-chart-pie col-3 d-flex align-items-center justify-content-center"></i><span class="col">Overview</span></a></li>
+                <li class="nav-item nav-item container-fluid g-0"><a href="#" class="row g-0"><i class="fa-solid fa-ticket col-3 d-flex align-items-center justify-content-center"></i><span class="col">Tickets</span></a></li>               
+                <li class="nav-item nav-item container-fluid g-0"><a href="#" class="row g-0"><i class="fa-solid fa-lightbulb col-3 d-flex align-items-center justify-content-center"></i><span class="col">Ideas</span></a></li> 
+                <li class="nav-item nav-item container-fluid g-0"><a href="#" class="row g-0"><i class="fa-solid fa-users col-3 d-flex align-items-center justify-content-center"></i><span class="col">Contacts</span></a></li>
+                <li class="nav-item nav-item container-fluid g-0"><a href="#" class="row g-0"><i class="fa-solid fa-user-tie col-3 d-flex align-items-center justify-content-center"></i><span class="col">Agents</span></a></li>
+                <li class="nav-item nav-item container-fluid g-0"><a href="#" class="row g-0"><i class="fa-solid fa-book col-3 d-flex align-items-center justify-content-center"></i><span class="col">Articles</span></a></li>
+              </ul>
+            <!------- Separator -->
+            <hr class="text-secondary my-4">
+            <!------- Additional Links -->
+              <ul class="list-unstyled">
+                <li class="nav-item nav-item container-fluid g-0"><a href="#" class="row g-0"><i class="fa-solid fa-gear col-3 d-flex align-items-center justify-content-center"></i><span class="col">Settings</span></a></li>
+                <li class="nav-item nav-item container-fluid g-0"><a href="#" class="row g-0"><i class="fa-solid fa-award col-3 d-flex align-items-center justify-content-center"></i><span class="col">Subscriptions</span></a></li>
+              </ul>
+         </nav>
+      </div>
+      <!----- Main Content Page -->
+      <div class="main-content-wrapper">
+        <!---------- Header -->
+          <header class="d-flex align-items-center justify-content-between w-100">
+            <a class="title-a text-decoration-none text-dark" href="#">Overview</a>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="fa-solid fa-magnifying-glass ms-auto"></i>
+              <i class="fa-solid fa-bell"></i>
+              <div class="vertical-divider"></div>
+              <span id="username">Jones Ferdinand</span>
+              <img src="./assets/images/photo.png" alt="nerd" width="35" height="35" class="rounded-circle"/>
+          </header>
+        <!---------- First Row (4-Data)-->
+          <div class="container-fluid mt-4 content-container">
+            <div class="row gx-3">
+              <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="card text-center card-hover">
+                  <div class="card-body">
+                    <h3 class="card-title text-body-tertiary">Unresolved</h3>
+                    <h2 class="card-text">61</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="card text-center card-hover">
+                  <div class="card-body">
+                    <h3 class="card-title text-body-tertiary">Overdue</h3>
+                    <h2 class="card-text">16</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="card text-center card-hover">
+                  <div class="card-body">
+                    <h3 class="card-title text-body-tertiary">Open</h3>
+                    <h2 class="card-text">43</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="card text-center card-hover">
+                  <div class="card-body">
+                    <h3 class="card-title text-body-tertiary">On Hold</h3>
+                    <h2 class="card-text">43</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!---------- Second Row (Graphs Section) -->
+            <div id="graph" class="container-fluid mt-2">
+              <!-- Header Section -->
+              <div class="d-flex justify-content-between align-items-center mb-3">
+              </div>
+              <!-- Content Section -->
+              <div class="row gx-3 gy-4 align-items-stretch">
+                <!-- Left Column: Graph -->
+                <div class="col-12 col-xl-8">
+                  <div class="card h-100 p-3 shadow-sm d-flex flex-column">
+                    <!-- Title Section Inside the Card -->
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <!-- Left Side: Title and Date -->
+                      <div>
+                        <h5 class="mb-0">Today's trends</h5>
+                        <small class="text-muted">as of 25 May 2019, 09:41 PM</small>
+                      </div>
+                      <!-- Right Side: Today and Yesterday -->
+                      <div class="d-flex align-items-center">
+                        <small class="me-3 text-primary">Today</small>
+                        <small class="text-muted">Yesterday</small>
+                      </div>
+                    </div>
+                    <!-- Chart -->
+                    <div class="flex-grow-1">
+                      <canvas id="trendsChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <!-- Right Column: List -->
+                <div class="col-12 col-xl-4">
+                  <div class="card h-100 shadow-sm">
+                    <ul class="list-group list-group-flush h-100 d-flex flex-column justify-content-between">
+                      <!-- Resolved -->
+                      <li class="list-group-item flex-fill d-flex flex-column justify-content-center text-center">
+                        <h3 class="card-title text-body-tertiary">Resolved</h3>
+                        <h2 class="card-text">449</h2>
+                      </li>
+
+                      <!-- Received -->
+                      <li class="list-group-item flex-fill d-flex flex-column justify-content-center text-center">
+                        <h3 class="card-title text-body-tertiary">Received</h3>
+                        <h2 class="card-text">426</h2>
+                      </li>
+
+                      <!-- Average First Response Time -->
+                      <li class="list-group-item flex-fill d-flex flex-column justify-content-center text-center">
+                        <h3 class="card-title text-body-tertiary">Average First Response Time</h3>
+                        <h2 class="card-text">33m</h2>
+                      </li>
+
+                      <!-- Average Response Time -->
+                      <li class="list-group-item flex-fill d-flex flex-column justify-content-center text-center">
+                        <h3 class="card-title text-body-tertiary">Average Response Time</h3>
+                        <h2 class="card-text">3h 8m</h2>
+                      </li>
+
+                      <!-- Resolution within SLA -->
+                      <li class="list-group-item flex-fill d-flex flex-column justify-content-center text-center">
+                        <h3 class="card-title text-body-tertiary">Resolution within SLA</h3>
+                        <h2 class="card-text">94%</h2>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <!---------- Bottom Row (Vertical Lists) -->
+            <div class="container-fluid mt-4">
+              <div class="row g-3">
+                <!-- Unresolved Tickets Section -->
+                <div class="col-12 col-lg-6">
+                  <div class="card shadow-sm g-0">
+                    <div class="card-body pb-0">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <h4>Unresolved Tickets</h4>
+                        <a href="#" class="text-decoration-none">View details</a>
+                      </div>
+                      <small class="text-secondary">Group:
+                        <strong class="fw-semibold text-secondary-emphasis">Support</strong>
+                      </small>
+                      <div class="d-flex align-items-center justify-content-between mt-4 pb-2">
+                        <p class="m-0 fw-semibold">Waiting on Feature Request</p>
+                        <span class="text-secondary">4238</span>
+                      </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <p class="m-0 fw-semibold">Awaiting Customer Response</p>
+                          <span class="text-secondary fw-normal">1005</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <p class="m-0 fw-semibold">Awaiting Developer Fix</p>
+                          <span class="text-secondary fw-normal">914</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <p class="m-0 fw-semibold">Pending</p>
+                          <span class="text-secondary fw-normal">281</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>         
+                <!-- Tasks Section -->
+                <div class="col-12 col-lg-6">
+                  <div class="card shadow-sm g-0">
+                    <div class="card-body pb-0">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <h4>Tasks</h4>
+                        <a href="#" class="text-decoration-none">View all</a>
+                      </div>
+                      <small class="text-secondary">Today</small>
+                      <div class="d-flex align-items-center justify-content-between mt-4 pb-2">
+                        <p class="m-0 fw-semibold text-body-tertiary">Create new task</p>
+                        <span class="text-secondary badge text-bg-light"><i class="fa-solid fa-plus"></i></span>
+                      </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <div class="form-check">
+                            <input type="radio" name="tasks" id="finish-ticket-update" value="finish-ticket-update" class="form-check-input" />
+                            <label for="finish-ticket-update" class="m-0 fw-semibold form-check-label">Finish ticket update</label>
+                          </div>
+                          <span class="text-white fw-semibold badge text-bg-warning">URGENT</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <div class="form-check">
+                            <input type="radio" name="tasks" id="create-new-example" value="create-new-example" class="form-check-input" />
+                            <label for="create-new-example" class="m-0 fw-semibold form-check-label text-secondary">Create new ticket example</label>
+                          </div>
+                          <span class="text-white fw-semibold badge text-bg-success">NEW</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <div class="form-check">
+                            <input type="radio" name="tasks" id="update-ticket-report" value="update-ticket-report" class="form-check-input" checked />
+                            <label for="update-ticket-report" class="m-0 fw-semibold form-check-label">Update ticket report</label>
+                          </div>
+                          <span class="fw-semibold badge text-bg-light text-secondary">DEFAULT</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>  
+   </body>
+</html>
+
+<!-- Chart.js (for the trends graph) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('trendsChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['1', '2', '3', '4', '5', '6', '7'],
+      datasets: [{
+        data: [10, 20, 30, 40, 50, 60, 70],
+        borderColor: 'blue',
+        borderWidth: 2,
+        fill: false,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        }
+      }
+    }
+  });
+</script>
